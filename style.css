@@ -64,7 +64,8 @@ a:hover{
 
 .side-menu{
     position: relative;
-    display: inline-block;
+    right: 45%;
+    top: 0;
 }
 
 .menu-icon{
@@ -79,7 +80,7 @@ a:hover{
 .menu-icon span{
     width: 100%;
     height: 2px; 
-    background-color: black;
+    background-color: darkgrey;
     transition: all 0.3 ease-in-out;
 }
 
@@ -136,7 +137,6 @@ a:hover{
     transform: none;
 }
 
-/* section */
 section {
     padding-top: 4vh;
     height: 96vh;
@@ -205,5 +205,68 @@ section {
     height: 2rem;
 }
 
+/*Button config*/
+.btn-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 
+.btn {
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    padding: 1em 2.5em;
+    border: none;
+    border-radius: 2em;
+    transition: all .1s linear;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    display: inline-flex;
+}
 
+.btn:active {
+    transform: scale(0.95);
+}
+.btn:hover{
+    box-shadow: 0 0.6em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    border: 0.15em solid transparent;
+    transition: all 0.3s 0.08s linear;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + .35em);
+    height: calc(100% + .35em);
+    transform: translate(-50%, -50%);
+    border-radius: 2em;
+}
+
+button:hover::before {
+    border-color:#8a0599;
+    width: calc(100% + .5em);
+    height: calc(100% + .5em);
+}
+
+.btn-color-1{
+    background: linear-gradient(135deg, #d261ee 0%, #8926a4 100%);
+    color: white;
+}
+
+.btn-color-1:hover::before{
+    border-color: #ad43c9;
+}
+
+.btn-color-2{
+    background: linear-gradient(135deg, #8926a4 0%, rgb(116, 1, 116) 100%);
+    color: white;
+}
+
+.btn-color-2:hover::before{
+    border-color: #7e138c;
+}
