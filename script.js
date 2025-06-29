@@ -16,25 +16,25 @@ function updateButton() {
     const nearBottom = scrollTop + windowHeight >= documentHeight - 200;
     
     if (nearBottom) {
-        button.classList.add('up-mode');
+        scrollButton.classList.add('up-mode');
     } else {
-        button.classList.remove('up-mode');
+        scrollButton.classList.remove('up-mode');
         }
     }
 
     // Function to handle button click
 function buttonClick() {
-    const isUpMode = button.classList.contains('up-mode');        
+    const isUpMode = scrollButton.classList.contains('up-mode');        
     if (isUpMode) {// Scroll to top
         window.scrollTo({top: 0, behavior: 'smooth'});
     } else{// Scroll to next section
         //gather sections
-        const sections = ['#profile', '#about', '#experience', '#projects', '#contact']
+        const sections = ['#about', '#experience', '#projects', '#contact']
         const currentScroll = window.pageYOffset;
 
         //find next section to scroll to
         for(let i=0; i < sections.length; i++){
-            const section = document.querySelector(section[i]);
+            const section = document.querySelector(sections[i]);
             if(section){
                 const sectionTop = section.offsetTop;
                 if(sectionTop > currentScroll + 100){
