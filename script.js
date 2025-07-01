@@ -12,7 +12,7 @@ function updateButton() {
     const windowHeight = window.innerHeight;
     const documentHeight = document.documentElement.scrollHeight;
             
-    // Calculate how close we are to the bottom (within 200px of bottom)
+    // Calculate how close we are to the bottom
     const nearBottom = scrollTop + windowHeight >= documentHeight - 200;
     
     if (nearBottom) {

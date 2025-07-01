@@ -390,12 +390,63 @@ button:hover::before {
     text-align: center;
 }
 
-.experience-icon{
-    height: 10px;
-    width: 10px;
+.detail-icon{
+    height: 20px;
+    width: 20px;
     border-radius: 2rem;
 }
 
 .about_pic-container{
     margin: auto 0;
 }
+
+/*Experience section*/
+#experience{
+    position: relative;
+}
+
+.about-text-p1{
+    position: relative;
+    text-align: center;
+}
+
+.experience-sub-title{
+    color: black;
+    font-weight: 600; 
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-icon{
+    display: flex; 
+    height: 20px;
+    width: 20px;
+}
+
+.experience-detail-container{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+article{
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon{
+    cursor: default;
+}
+
+
