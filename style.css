@@ -403,6 +403,13 @@ button:hover::before {
 /*Experience section*/
 #experience{
     position: relative;
+    padding: 0 1rem;
+    /*reset position to get it to sit correctly*/
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .about-text-p1{
@@ -415,6 +422,7 @@ button:hover::before {
     font-weight: 600; 
     font-size: 1.75rem;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .experience-icon{
@@ -431,18 +439,25 @@ button:hover::before {
 
 .article-container{
     display: flex;
-    text-align: initial;
+    text-align: center;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+h4{
+    text-align: left;
+    font-size: large;
 }
 
 article{
     display: flex;
     width: 10rem;
-    justify-content: space-around;
+    justify-content: left;
     gap: 0.5rem;
+    flex-shrink: 0;
 }
 
 article .icon{
