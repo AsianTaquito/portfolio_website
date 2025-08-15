@@ -402,14 +402,10 @@ button:hover::before {
 
 /*Experience section*/
 #experience{
-    position: relative;
-    padding: 0 1rem;
-    /*reset position to get it to sit correctly*/
-    width: 100%;
-    max-width: 100%;
-    margin-top: 2rem;
-    margin-right: 0;
-    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-text-p1{
@@ -462,6 +458,52 @@ article{
 
 article .icon{
     cursor: default;
+}
+
+/*Projects section*/
+#projects{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-title{
+    text-align: center;
+
+}
+
+.project{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+    margin-left: 1 rem;
+}
+
+.project-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.project-details{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    border: black 0.1rem solid;
+    border-radius: 2rem;
+    padding: 1rem;
 }
 
 
