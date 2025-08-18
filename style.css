@@ -470,7 +470,6 @@ article .icon{
 
 .project-title{
     text-align: center;
-
 }
 
 .project{
@@ -479,9 +478,6 @@ article .icon{
     max-width: 100%;
     margin-top: 2rem;
     margin-left: 1 rem;
-}
-
-.project-text{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -503,7 +499,19 @@ article .icon{
     flex-direction: column;
     border: black 0.1rem solid;
     border-radius: 2rem;
-    padding: 1rem;
+    padding: .25rem 1rem;
+    height: 550px;
+    width: 200px;
 }
 
+.project-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    height: 400px;
+    width: 200px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
 
