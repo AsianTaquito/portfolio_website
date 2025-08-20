@@ -5,6 +5,7 @@ function toggleMenu(){
     icon.classList.toggle("open");
 }
 
+// Page scroll button 
 const scrollButton = document.getElementById('scrollButton');
 // Function to check scroll position and update button
 function updateButton() {
@@ -50,3 +51,8 @@ function buttonClick() {
 window.addEventListener('scroll', updateButton);
 // Initial check
  updateButton();
+
+
+
+
+
