@@ -462,6 +462,7 @@ article .icon{
 
 /*Projects section*/
 #projects{
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -470,11 +471,13 @@ article .icon{
     width: 80vw;
     max-width: 80vw;
     min-width: 320px;
-    height: 600px;
     box-sizing: border-box;
 }
 
-.project-container{
+
+.project-container {
+    margin: 0 64px; /* Add space for arrows so they don't overlap cards */
+    position: relative;
     display: flex;
     flex-direction: row;
     gap: .5rem;
@@ -483,7 +486,7 @@ article .icon{
     overflow-y: hidden;
     overflow-x: auto;
     width: 100%;
-    height: 100%;
+    height: 80%;
     max-width: 100%;
     min-width: 320px;
     scrollbar-width: none;
@@ -555,8 +558,88 @@ article .icon{
     font-size: 0.9rem;
 }
 
-.project-details .btn {
+.project-details{
     align-self: center;
     margin-top: auto;
     margin-bottom: 0.5rem;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.scroll-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: #222; /* High contrast for visibility */
+    stroke-width: 3;
+    opacity: 1; /* Make arrow fully visible */
+    transition: opacity 0.3s;
+}
+
+.scroll-btn:hover svg {
+    opacity: 1;
+}
+
+.scroll-left {
+    left: 16px;
+    background: transparent;
+}
+.scroll-right {
+    right: 16px;
+    background: transparent;
+}
+
+/* Arrows container for animation */
+.arrow-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-container svg {
+    position: absolute;
+    animation: none;
+}
+
+.scroll-btn:hover .arrow1 {
+    animation: arrowMove 1s linear infinite;
+}
+.scroll-btn:hover .arrow2 {
+    animation: arrowMove 1s linear infinite 0.2s;
+}
+.scroll-btn:hover .arrow3 {
+    animation: arrowMove 1s linear infinite 0.4s;
+}
+
+/* Animation: move arrows depending on direction */
+@keyframes arrowMove {
+    0% { transform: translateX(0); opacity: 1; }
+    60% { transform: translateX(var(--moveX)); opacity: 0; }
+    100% { transform: translateX(var(--moveX)); opacity: 0; }
+}
+
+.scroll-left .arrow1, 
+.scroll-left .arrow2,
+.scroll-left .arrow3 {
+    --moveX: -15px;
+}
+
+.scroll-right .arrow1,
+.scroll-right .arrow2,
+.scroll-right .arrow3 {
+    --moveX: 15px;
 }

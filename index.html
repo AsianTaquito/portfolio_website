@@ -187,8 +187,13 @@
     <section id="projects">
         <p class="about-text-p1">My</p>
         <h1 class="title">Projects</h1>
-        <!--<button class="arrow-btn left-arrow" id="left-arrow" onclick="scrollProjects('left')"></button>
-        <button class="arrow-btn right-arrow" id="right-arrow" onclick="scrollProjects('right')"></button>-->
+        <button class="scroll-btn scroll-left" id="left-arrow" onclick="scrollCarousel(-2)">      
+            <div class="arrow-container">
+                <svg class="arrow1" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                <svg class="arrow2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                <svg class="arrow3" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            </div>
+        </button>
         <div class="project-container" id="project-container">
             <div class="project">
                 <div class="project-details">
@@ -231,6 +236,13 @@
                 </div>
             </div>
         </div>
+        <button class="scroll-btn scroll-right" id="right-arrow" onclick="scrollCarousel(2)">
+            <div class="arrow-container">
+                <svg class="arrow1" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg class="arrow2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                <svg class="arrow3" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+            </div>
+        </button>
      </section>
     <section id="contact">
     </section>
