@@ -485,9 +485,8 @@ article .icon{
     margin: 0 auto;
     overflow-y: hidden;
     overflow-x: auto;
-    width: 100%;
+    width: 105%;
     height: 80%;
-    max-width: 100%;
     min-width: 320px;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -506,8 +505,6 @@ article .icon{
     border-radius: 2rem;
     min-width: 320px;
     max-width: 350px;
-    width: 350px;
-    height: 100%;
     box-sizing: border-box;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
@@ -594,11 +591,12 @@ article .icon{
 }
 
 .scroll-left {
-    left: 16px;
+    left: -10px;
     background: transparent;
 }
+
 .scroll-right {
-    right: 16px;
+    right: -10px;
     background: transparent;
 }
 
