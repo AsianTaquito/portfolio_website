@@ -11,4 +11,8 @@
     .project{
         flex: 0 0 280px;
     }
+    .experience-icon{
+        width: 75px;
+        height: 75px;
+    }
 }

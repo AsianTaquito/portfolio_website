@@ -423,16 +423,23 @@ button:hover::before {
 }
 
 .experience-icon{
-    display: flex; 
-    height: 40px;
+    display: flex;
     margin: auto;
+    width: 100px;
+    height: 100px;
 }
 
 .experience-detail-container-top{
     display: flex; 
     justify-content: center;
     flex-direction: column;
-    
+}
+
+.experience-detail-container-bottom{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0;
 }
 
 .article-container{
@@ -440,15 +447,9 @@ button:hover::before {
     text-align: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 2rem;
     justify-content: center;
     margin: 0 auto;
-    max-width: 80%;
-}
-
-h4{
-    text-align: center;
-    font-size: large;
 }
 
 article{
@@ -464,6 +465,7 @@ article{
     overflow: hidden;
     transition: all 0.4s ease 0s;
     align-content: center;
+    max-width: 50%;
 }
 
 article:hover{
