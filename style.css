@@ -429,18 +429,36 @@ button:hover::before {
     height: 100px;
 }
 
-.experience-detail-container-top{
-    display: flex; 
-    justify-content: center;
-    flex-direction: column;
+.experience-detail-frontend{
+    flex: 1;
+    margin-top: 0;
+    margin-left: 2rem;
+    max-height: fit-content;
 }
 
-.experience-detail-container-bottom{
-    display: flex; 
-    justify-content: center;
-    flex-direction: column;
+.experience-detail-backend{
+    flex: 1;
     margin-top: 0;
+    margin-left: 2rem;
+    max-height: fit-content;
 }
+
+.experience-detail-tools{
+    max-height: fit-content;
+    margin-top: 10.5rem;
+    flex: 1;
+}
+
+.experience-detail-container{
+    display: flex; 
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 0;
+}
+
 
 .article-container{
     display: flex;
