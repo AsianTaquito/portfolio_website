@@ -54,48 +54,8 @@ window.addEventListener('scroll', updateButton);
 
 
 
-function updateArrowVisibility(){
-    const container = document.getElementById('project-container');
-    const leftArrow = document.getElementById('left-arrow');
-    const rightArrow = document.getElementById('right-arrow');
-    const maxScrollLeft = container.scrollWidth - container.clientWidth;
 
-    if(container.scrollLeft <= 0){
-        leftArrow.style.visibility = 'hidden';
-        leftArrow.style.pointerEvents = 'none';
-    } else{
-        leftArrow.style.visibility = 'visible';
-        leftArrow.style.pointerEvents = 'auto';
-    }
 
-    if(container.scrollLeft < maxScrollLeft - 1){
-        rightArrow.style.visibility = 'visible';
-        rightArrow.style.pointerEvents = 'auto';
-    } else{
-        rightArrow.style.visibility = 'hidden';
-        rightArrow.style.pointerEvents = 'none';
-    }
-}
-
-function scrollCarousel(direction) {
-    const container = document.getElementById('project-container');
-    const card = container.querySelector('.project');
-    if (!card) return;
-    const style = window.getComputedStyle(card);
-    const gap = parseInt(style.marginRight) || 16; // fallback gap if not set
-    const scrollAmount = card.offsetWidth + gap;
-    container.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    updateArrowVisibility();
-    const container = document.getElementById('project-container');
-    container.addEventListener('scroll', updateArrowVisibility);
-    window.addEventListener('resize', updateArrowVisibility);
-});
 
 
 

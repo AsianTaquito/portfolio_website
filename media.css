@@ -14,4 +14,55 @@
     .experience-detail-frontend, .experience-detail-backend, .experience-detail-tools{
         margin: auto;
     }
+
 }
+
+
+@media (max-width: 1200px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h1 {
+                font-size: 80px;
+                letter-spacing: -4px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 80px 30px;
+            }
+
+            h1 {
+                font-size: 56px;
+                letter-spacing: -2px;
+                transform: rotate(0);
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                transform: rotate(0deg) !important;
+            }
+
+            .cta-section {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .social-links {
+                flex-wrap: wrap;
+            }
+        }
