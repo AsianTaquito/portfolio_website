@@ -29,7 +29,7 @@
             }
         }
 
-        @media (max-width: 780px) {
+        @media (max-width: 800px) {
             .contact-section {
                 padding: 80px 30px;
             }
@@ -74,7 +74,6 @@
             .profile_pic-container {
                 width: 100%;
                 max-width: 300px;
-                margin: auto !important;
             }
 
             #profile {
@@ -126,7 +125,7 @@
         }
 
         /* Tablet breakpoint - 600px */
-        @media (max-width: 600px) {
+        @media (max-width: 620px) {
             /* Navigation */
             nav {
                 height: auto;
@@ -146,12 +145,11 @@
             }
 
             .profile_pic-container {
-                margin-left: auto;
-                margin-right: auto;
+                display:none;
             }
 
             .profile-text {
-                text-align: center;
+                align-items: center;
             }
 
             .title {
@@ -181,23 +179,6 @@
                 max-width: 80px;
             }
 
-            /* Experience section */
-            .experience-detail-frontend,
-            .experience-detail-backend,
-            .experience-detail-tools {
-                width: 100%;
-                margin-bottom: 2rem;
-            }
-
-            .experience-sub-title {
-                font-size: 1.5rem;
-            }
-
-            .experience-icon {
-                width: 60px;
-                height: 60px;
-            }
-
             /* Contact section */
             h1 {
                 font-size: 42px;
@@ -210,8 +191,7 @@
         }
 
         /* Small mobile breakpoint - 500px */
-        @media (max-width: 500px) {
-            /* Typography */
+        @media (max-width: 400px) {
             .title {
                 font-size: 1.75rem;
             }
@@ -271,22 +251,7 @@
             .text-container {
                 padding: 1rem;
             }
-
-            /* Experience section */
-            .experience-icon {
-                width: 50px;
-                height: 50px;
-            }
-
-            article {
-                margin: 0.3rem;
-                padding: 0.5rem;
-            }
-
-            .article-container {
-                gap: 0.5rem;
-            }
-
+        
             /* Projects section */
             .project {
                 flex: 0 0 100%;
@@ -330,10 +295,7 @@
             .svgIcon {
                 width: 20px;
             }
-        }
-
-        /* Extra small mobile - 400px */
-        @media (max-width: 400px) {
+        
             .title {
                 font-size: 1.5rem;
             }

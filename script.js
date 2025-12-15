@@ -5,6 +5,71 @@ function toggleMenu(){
     icon.classList.toggle("open");
 }
 
+// Dynamic Section Loading
+let lastScrollY = window.pageYOffset;
+const sections = document.querySelectorAll('#about, #experience, #projects, #contact');
+
+// Add dynamic-section class to all sections
+sections.forEach(section => {
+    section.classList.add('dynamic-section');
+});
+
+// Intersection Observer for scroll-based animations
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: [0, 0.35]
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        const currentScrollY = window.pageYOffset;
+        const scrollingDown = currentScrollY > lastScrollY;
+        
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+            entry.target.classList.remove('hiding-up', 'hiding-down');
+            entry.target.classList.add('visible');
+        } else if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
+            if (entry.target.classList.contains('visible')) {
+                entry.target.classList.remove('visible');
+                if (scrollingDown) {
+                    entry.target.classList.add('hiding-up');
+                } else {
+                    entry.target.classList.add('hiding-down');
+                }
+            }
+        }
+        
+        lastScrollY = currentScrollY;
+    });
+}, observerOptions);
+
+// Observe all sections
+sections.forEach(section => {
+    sectionObserver.observe(section);
+});
+
+// Track scroll direction
+window.addEventListener('scroll', () => {
+    lastScrollY = window.pageYOffset;
+});
+
+// Handle nav link clicks with animation
+const navLinks = document.querySelectorAll('a[href^="#"]');
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (targetId === '#' || targetId === './#contact') return;
+        
+        const targetSection = document.querySelector(targetId);
+        if (targetSection && targetSection.classList.contains('dynamic-section')) {
+            // Trigger animation
+            targetSection.classList.remove('hiding-up', 'hiding-down');
+            targetSection.classList.add('visible');
+        }
+    });
+});
+
 // Page scroll button 
 const scrollButton = document.getElementById('scrollButton');
 // Function to check scroll position and update button
