@@ -736,6 +736,20 @@ article:hover{
             backdrop-filter: blur(10px);
             text-decoration: none;
             display: inline-block;
+            border-radius: 999px;
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.3);
+        }
+
+        .cta-btn:hover,
+        .cta-btn:focus {
+            text-decoration: none;
+            color: black;
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
         }
 
         .cta-btn::before {
@@ -747,15 +761,10 @@ article:hover{
             transition: opacity 0.4s ease;
         }
 
-        .cta-btn span {
-            position: relative;
-            z-index: 1;
-        }
-
         .cta-btn:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 0 #0f172a, 0 18px 50px rgba(168, 85, 247, 0.6);
-            border-color: #ec4899;
+            border-color: rgba(255, 255, 255, 0.95);
         }
 
         .cta-btn:hover::before {
@@ -774,7 +783,7 @@ article:hover{
         }
 
         .social-label {
-            color: rgba(255, 255, 255, 0.6);
+            color: grey;
             font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;

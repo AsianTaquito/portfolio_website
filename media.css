@@ -115,8 +115,7 @@
             }
 
             .article-container {
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-direction: column;
             }
 
             article {
