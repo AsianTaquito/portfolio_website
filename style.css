@@ -362,21 +362,21 @@ button:hover::before {
 }
 
 .btn-color-1{
-    background: linear-gradient(135deg, #d261ee 0%, #8926a4 100%);
+    background: linear-gradient(135deg, #d375eb 0%, #b959dc 25%, #a041c6 50%);
     color: white;
 }
 
 .btn-color-1:hover::before{
-    border-color: #ad43c9;
+    border-color: #b959dc;
 }
 
 .btn-color-2{
-    background: linear-gradient(135deg, #8926a4 0%, rgb(116, 1, 116) 100%);
+    background: linear-gradient(135deg, #a041c6 0%, #7b2098 50%, #5e0162 100%);
     color: white;
 }
 
 .btn-color-2:hover::before{
-    border-color: #7e138c;
+    border-color: #7b2098;
 }
 
 .contact-cta {
@@ -387,7 +387,7 @@ button:hover::before {
     gap: 8px;
     min-width: 0;
     padding: 1em 2.5em;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .contact-label {
@@ -427,6 +427,27 @@ button:hover::before {
 .contact-cta:hover .contact-icon-container,
 .contact-cta:focus .contact-icon-container {
     opacity: 1;
+}
+
+.contact-cta::before {
+    content: '';
+    position: absolute;
+    border: 0.15em solid transparent;
+    transition: all 0.3s 0.08s linear;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + .35em);
+    height: calc(100% + .35em);
+    transform: translate(-50%, -50%);
+    border-radius: 2em;
+    pointer-events: none;
+}
+
+.contact-cta:hover::before,
+.contact-cta:focus-visible::before {
+    border-color: #7e138c;
+    width: calc(100% + .5em);
+    height: calc(100% + .5em);
 }
 
 /*scroll button config*/
