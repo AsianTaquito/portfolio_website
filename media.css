@@ -8,6 +8,10 @@
     #side-nav{
         display: flex;
     }
+    nav:hover {
+        backdrop-filter: none;
+        background-color: transparent;
+    }
     .project{
         flex: 0 0 280px;
     }
@@ -29,9 +33,26 @@
             }
         }
 
+        /* Desktop half window - 900px */
         @media (max-width: 900px) {
             .contact-section {
                 padding: 80px 30px;
+            }
+
+            .header {
+                margin-bottom: 60px;
+            }
+
+            .contact-grid {
+                margin-bottom: 32px;
+            }
+
+            .social-section {
+                margin-top: 48px;
+            }
+
+            .cta-section {
+                justify-content: center;
             }
 
             h1 {
@@ -42,28 +63,6 @@
 
             .subtitle {
                 font-size: 18px;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-card {
-                transform: rotate(0deg) !important;
-            }
-
-            .cta-section {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .cta-btn {
-                width: 100%;
-                text-align: center;
-            }
-
-            .social-links {
-                flex-wrap: wrap;
             }
 
             /* Profile section */
@@ -125,6 +124,7 @@
                 padding: 0.75rem 1rem;
             }
 
+
         }
 
         /* Tablet breakpoint - 620px */
@@ -183,9 +183,6 @@
                 max-width: 80px;
             }
 
-            /* Experience section */
-            
-            
 
             /* Contact section */
             h1 {
@@ -193,8 +190,31 @@
                 letter-spacing: -1px;
             }
 
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
             .contact-card {
-                padding: 1.5rem;
+                padding: 20px 12px;
+                aspect-ratio: 1;
+            }
+
+            .card-icon {
+                font-size: 32px;
+                margin-bottom: 12px;
+            }
+
+            .card-title {
+                font-size: 10px;
+            }
+
+            .card-content {
+                font-size: 14px;
+            }
+
+            .cta-btn { 
+
             }
         }
 
@@ -220,32 +240,6 @@
                 font-size: 0.9rem;
             }
 
-            /* Profile section */
-            .profile_pic-container {
-                max-width: 250px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .btn-container {
-                flex-direction: column;
-                width: 100%;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 250px;
-            }
-
-            #socials {
-                gap: 1rem;
-            }
-
-            .icon {
-                width: 30px;
-                height: 30px;
-            }
 
             /* About section */
             .about_pic-container {
@@ -271,12 +265,28 @@
                 padding: 60px 20px;
             }
 
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
             .contact-card {
-                padding: 1.25rem;
+                padding: 16px 8px;
+                aspect-ratio: 1;
             }
 
             .card-icon {
-                font-size: 2rem;
+                font-size: 28px;
+                margin-bottom: 8px;
+            }
+
+            .card-title {
+                font-size: 8px;
+                margin-bottom: 6px;
+            }
+
+            .card-content {
+                font-size: 12px;
             }
 
             .social-link {

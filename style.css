@@ -8,7 +8,7 @@ body{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    --c: rgb(224, 89, 241);
+    --c: #b24dd9;
     background-color: black;
     background-image: radial-gradient(4px 100px at 0px 235px, var(--c), #0000),
         radial-gradient(4px 100px at 300px 235px, var(--c), #0000),
@@ -128,7 +128,8 @@ nav{
     justify-content: space-around;
     align-items: center;
     height: 17vh;
-}   
+}
+
 
 .nav-links{
     gap: 2rem;
@@ -779,9 +780,12 @@ article:hover{
 
         .card-icon {
             font-size: 48px;
-            margin-bottom: 24px;
-            display: block;
+            display: inline-flex;
+            align-items: center;
             position: relative;
+            margin-right: 12px;
+            vertical-align: middle;
+            line-height: 1;
         }
 
         .card-title {
@@ -792,6 +796,8 @@ article:hover{
             text-transform: uppercase;
             letter-spacing: 2px;
             position: relative;
+            display: inline-block;
+            vertical-align: center; 
         }
 
         .card-content {
