@@ -853,6 +853,13 @@ article:hover{
             opacity: 1;
         }
 
+        .contact-card:hover .card-icon svg path,
+        .contact-card:hover .card-icon svg rect,
+        .contact-card:hover .card-icon svg circle,
+        .contact-card:hover .card-icon svg polygon {
+            fill: white;
+        }
+
         .card-icon {
             font-size: 48px;
             display: inline-flex;
@@ -875,12 +882,20 @@ article:hover{
             vertical-align: center; 
         }
 
+        .contact-card:hover .card-title {
+            color: white;
+        }
+
         .card-content {
             color: rgba(255, 255, 255, 0.95);
             font-size: 18px;
             font-weight: 600;
             line-height: 1.5;
             position: relative;
+        }
+
+        .contact-card:hover .card-content {
+            color: #0a0a0a;
         }
 
         .card-content a {
@@ -890,7 +905,7 @@ article:hover{
             transition: all 0.3s ease;
         }
 
-        .card-content a:hover {
+        .contact-card:hover .card-content a {
             color: #a855f7;
             border-bottom-color: #a855f7;
         }
