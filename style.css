@@ -686,9 +686,9 @@ article:hover{
 
 .label {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #a855f7;
-    color: #a855f7;
+    background: linear-gradient(135deg, #e085f7 0%, #d373f3 100%);
+    border: 2px transparent;
+    color: black;
     padding: 12px 28px;
     font-size: 12px;
     font-weight: 900;
@@ -696,8 +696,10 @@ article:hover{
     text-transform: uppercase;
     margin-bottom: 40px;
     position: relative;
-    transform: rotate(-2deg);
+    transform: rotate(-4deg);
     backdrop-filter: blur(10px);
+    border-radius: 999px;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.3);
 }
 
 
@@ -824,8 +826,8 @@ article:hover{
         .cta-btn {
             padding: 24px 56px;
             background: rgba(255, 255, 255, 0.1);
-            border: 3px solid #a855f7;
-            color: #ffffff;
+            border: 3px solid liner-gradient(135deg, #e085f7 0%, #c969e8 25%, #b24dd9 50%, #8b27a6 75%, #740174 100%);
+            color: black;
             font-size: 18px;
             font-weight: 900;
             text-transform: uppercase;
@@ -844,7 +846,7 @@ article:hover{
         .cta-btn:hover,
         .cta-btn:focus {
             text-decoration: none;
-            color: black;
+            color: white;
         }
 
         .cta-btn span {
@@ -857,7 +859,7 @@ article:hover{
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            background: linear-gradient(135deg, #e085f7 0%, #c969e8 25%, #b24dd9 50%, #8b27a6 75%, #740174 100%);
             opacity: 0;
             transition: opacity 0.4s ease;
         }
