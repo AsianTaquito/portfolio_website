@@ -825,6 +825,10 @@ article:hover{
     overflow: visible;
 }
 
+.article-container article:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+
 .article-container article::before{
     content: "";
     position: absolute;
@@ -845,7 +849,7 @@ article:hover{
 }
 
 .article-container article:hover > svg.experience-icon{
-    transform: translate(-15px, -15px) scale(1.15);
+    transform: translate(-15px, -15px) scale(1.25);
 }
 
 /*Project Section*/
