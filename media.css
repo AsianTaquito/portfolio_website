@@ -106,6 +106,10 @@
                 padding: 1rem;
             }
 
+            .github-calendar-container{
+                width: 95%;
+            }
+
             /* Experience section */
             .experience-detail-container {
                 padding: 1rem;
@@ -177,9 +181,10 @@
                 padding: 1rem;
             }
 
-            .detail-icon {
+            .detail-icon{
                 max-width: 80px;
             }
+
 
 
             /* Contact section */

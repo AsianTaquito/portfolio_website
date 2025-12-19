@@ -530,8 +530,8 @@ button:hover::before {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    padding: 5rem 2rem;
-    min-height: 100vh;
+    padding: 3rem 2rem;
+    min-height: 96vh;
 }
 
 .about-text{
@@ -544,16 +544,10 @@ button:hover::before {
     margin-bottom: 0.5rem;
 }
 
-.about-container{
-    gap: 2rem;
+#about .about-container{
+    gap: 2.25rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
-}
-
-#about .about-container{
-    gap: 3rem;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
     max-width: 1200px;
     width: 100%;
     align-items: center;
@@ -706,19 +700,54 @@ button:hover::before {
     position: relative;
 }
 
-#about .text-container{
+.text-container{
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(178, 77, 217, 0.15);
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 1.5rem;
     backdrop-filter: blur(10px);
     line-height: 1.8;
 }
 
-#about .text-container p{
+.text-container p{
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.05rem;
     margin: 0;
+}
+
+.github-calendar-container{
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(178, 77, 217, 0.15);
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.github-calendar-title{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+
+.github-calendar-link{
+    display: block;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.github-calendar-img{
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Experience section*/
