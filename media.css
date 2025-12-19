@@ -98,11 +98,6 @@
                 gap: 1rem;
             }
 
-            .text-container {
-                order: 2;
-                width: 100%;
-            }
-
             .detail-container {
                 padding: 1rem;
                 flex: 1;

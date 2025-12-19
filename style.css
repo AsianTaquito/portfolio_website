@@ -144,7 +144,7 @@ a{
 }
 
 a:hover{
-    color: #d375eb;
+    color: #5eb2fb;
     text-decoration: none;
     text-decoration-color: rgb(181,181,181)
 }
@@ -207,7 +207,7 @@ a:hover{
 }
 
 .menu-links a:hover{
-    color: #d375eb;
+    color: #5eb2fb;
 }
 
 .menu-links li{
@@ -530,11 +530,18 @@ button:hover::before {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    padding: 5rem 2rem;
+    min-height: 100vh;
 }
 
 .about-text{
     text-align: center;
     font-size: 1rem;
+    color: #b24dd9;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
 }
 
 .about-container{
@@ -543,11 +550,25 @@ button:hover::before {
     margin-top: 2rem;
 }
 
+#about .about-container{
+    gap: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
 .about-details-container{
     justify-content: center;
     flex-direction: column;
     height: 80%;
-    width: 80%; 
+    width: 80%;
+}
+
+#about .about-details-container{
+    flex: 1;
+    gap: 2rem;
 }
 
 .about-container, .about-details-container{
@@ -555,30 +576,70 @@ button:hover::before {
 }
 
 .about-pic{
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     height: 400px;
     width: 400px;
-    margin-left: -30px;
+    object-fit: cover;
+    box-shadow: 0 10px 40px rgba(178, 77, 217, 0.2),
+                0 0 20px rgba(178, 77, 217, 0.1);
 }
 
 .detail-container{
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     flex: 1;
-    background: white;
-    border-radius: 2rem;
-    border:rgb(53, 53, 53) 0.1rem solid;
-    border-color: grey;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(178, 77, 217, 0.2);
     text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.detail-container:hover{
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(178, 77, 217, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(178, 77, 217, 0.15);
+}
+
+.detail-container h3{
+    color: white;
+    font-size: 1.25rem;
+    margin: 1rem 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.detail-container p1{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
 }
 
 .detail-icon{
-    height: 20px;
-    width: 20px;
-    border-radius: 2rem;
+    height: 32px;
+    width: 32px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
 }
 
 .about_pic-container{
     margin: auto 0;
+    position: relative;
+}
+
+#about .text-container{
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(178, 77, 217, 0.15);
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    line-height: 1.8;
+}
+
+#about .text-container p{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    margin: 0;
 }
 
 /*Experience section*/
