@@ -814,6 +814,40 @@ article:hover{
     cursor: default;
 }
 
+/* separates on hover */
+.article-container article{
+    position: relative;
+}
+
+/* Let the inner panel offset outside the tile */
+.article-container article,
+.article-container article:hover{
+    overflow: visible;
+}
+
+.article-container article::before{
+    content: "";
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 96%;
+    height: 96%;
+    border-radius: 1rem;
+    transition: 300ms ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.article-container article > svg.experience-icon{
+    transition: transform 300ms ease;
+    transform: translate(0, 0);
+    transform-origin: center;
+}
+
+.article-container article:hover > svg.experience-icon{
+    transform: translate(-15px, -15px) scale(1.15);
+}
+
 /*Project Section*/
 #projects {
     display: flex;
