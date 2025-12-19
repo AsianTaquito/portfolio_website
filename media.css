@@ -99,8 +99,11 @@
             }
 
             .detail-container {
-                padding: 1rem;
                 flex: 1;
+            }
+
+            .detail-card-body {
+                padding: 1rem;
             }
 
             /* Experience section */
@@ -170,7 +173,7 @@
                 width: 100%;
             }
 
-            .detail-container {
+            .detail-card-body {
                 padding: 1rem;
             }
 
