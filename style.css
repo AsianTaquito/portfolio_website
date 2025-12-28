@@ -717,10 +717,13 @@ button:hover::before {
 }
 
 .github-calendar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(178, 77, 217, 0.15);
     border-radius: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem 0 1rem;
     backdrop-filter: blur(10px);
     width: 100%;
     max-width: 1200px;
@@ -746,15 +749,48 @@ button:hover::before {
     width: 100%;
     height: auto;
     max-width: 860px;
-    margin: auto;
 }
 
-/* Remove white border from GitHub calendar elements */
+/* Override Github calendar default CSS */
 .github-calendar-container .calendar,
 .github-calendar-container .js-yearly-contributions,
 .github-calendar-container .js-calendar-graph-svg,
 .github-calendar-container svg {
     border: none !important;
+}
+
+:root {
+    --color-calendar-graph-day-bg: #cfc9d9 !important;
+    --color-calendar-graph-day-L1-bg: #d1a6f7 !important;
+    --color-calendar-graph-day-L2-bg: #b24dd9 !important;
+    --color-calendar-graph-day-L3-bg: #8a2bb8 !important;
+    --color-calendar-graph-day-L4-bg: #5e0162 !important;
+}
+
+.github-calendar-container rect.ContributionCalendar-day[data-level='0'],
+.github-calendar-container rect[data-level='0'],
+.github-calendar-container .ContributionCalendar-day[data-level='0'] {
+    fill: var(--color-calendar-graph-day-bg) !important;
+}
+.github-calendar-container rect.ContributionCalendar-day[data-level='1'],
+.github-calendar-container rect[data-level='1'],
+.github-calendar-container .ContributionCalendar-day[data-level='1'] {
+    fill: var(--color-calendar-graph-day-L1-bg) !important;
+}
+.github-calendar-container rect.ContributionCalendar-day[data-level='2'],
+.github-calendar-container rect[data-level='2'],
+.github-calendar-container .ContributionCalendar-day[data-level='2'] {
+    fill: var(--color-calendar-graph-day-L2-bg) !important;
+}
+.github-calendar-container rect.ContributionCalendar-day[data-level='3'],
+.github-calendar-container rect[data-level='3'],
+.github-calendar-container .ContributionCalendar-day[data-level='3'] {
+    fill: var(--color-calendar-graph-day-L3-bg) !important;
+}
+.github-calendar-container rect.ContributionCalendar-day[data-level='4'],
+.github-calendar-container rect[data-level='4'],
+.github-calendar-container .ContributionCalendar-day[data-level='4'] {
+    fill: var(--color-calendar-graph-day-L4-bg) !important;
 }
 
 /*Experience section*/
