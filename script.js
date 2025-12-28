@@ -117,6 +117,18 @@ window.addEventListener('scroll', updateButton);
 // Initial check
  updateButton();
 
+// GitHub contributions calendar
+(function initGitHubCalendar() {
+    const calendarEl = document.querySelector('.github-calendar-container .calendar');
+    if (!calendarEl) return;
+    if (typeof GitHubCalendar !== 'function') return;
+
+    GitHubCalendar(calendarEl, 'AsianTaquito', {
+        responsive: true,
+        global_stats: false
+    });
+})();
+
 
 
 
