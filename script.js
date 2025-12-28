@@ -126,6 +126,17 @@ window.addEventListener('scroll', updateButton);
     GitHubCalendar(calendarEl, 'AsianTaquito', {
         responsive: true,
         global_stats: false
+    }).then(() => {
+        // Remove unwanted headings
+        calendarEl.querySelectorAll('h2, h3, a, .sr-only').forEach(el => {
+            const text = el.textContent.toLowerCase();
+            if (text.includes('skip to') || 
+                text.includes('contribution') || 
+                text.includes('graph') ||
+                text.includes('list')) {
+                el.remove();
+            }
+        });
     });
 })();
 

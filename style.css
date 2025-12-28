@@ -547,7 +547,7 @@ button:hover::before {
 #about .about-container{
     gap: 2.25rem;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     max-width: 1200px;
     width: 100%;
     align-items: center;
@@ -720,12 +720,11 @@ button:hover::before {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(178, 77, 217, 0.15);
     border-radius: 1rem;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     backdrop-filter: blur(10px);
     width: 100%;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .github-calendar-title{
@@ -747,8 +746,15 @@ button:hover::before {
     width: 100%;
     height: auto;
     max-width: 860px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+}
+
+/* Remove white border from GitHub calendar elements */
+.github-calendar-container .calendar,
+.github-calendar-container .js-yearly-contributions,
+.github-calendar-container .js-calendar-graph-svg,
+.github-calendar-container svg {
+    border: none !important;
 }
 
 /*Experience section*/
@@ -786,14 +792,12 @@ button:hover::before {
 .experience-detail-frontend{
     flex: 1;
     margin-top: 0;
-    margin-left: 2rem;
     max-height: fit-content;
 }
 
 .experience-detail-backend{
     flex: 1;
     margin-top: 0;
-    margin-left: 2rem;
     max-height: fit-content;
 }
 
@@ -806,10 +810,11 @@ button:hover::before {
 .experience-detail-container{
     display: flex; 
     position: relative;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     margin-bottom: 0;
-    gap: space-evenly;
+    gap: 2rem;
+    width: 100%;
 }
 
 
