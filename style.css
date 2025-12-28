@@ -760,11 +760,10 @@ button:hover::before {
 }
 
 :root {
-    --color-calendar-graph-day-bg: #cfc9d9 !important;
-    --color-calendar-graph-day-L1-bg: #d1a6f7 !important;
-    --color-calendar-graph-day-L2-bg: #b24dd9 !important;
-    --color-calendar-graph-day-L3-bg: #8a2bb8 !important;
-    --color-calendar-graph-day-L4-bg: #5e0162 !important;
+    --color-calendar-graph-day-L1-bg: #7dc2ff !important;
+    --color-calendar-graph-day-L2-bg: #2374fc !important;
+    --color-calendar-graph-day-L3-bg: #042bbf !important;
+    --color-calendar-graph-day-L4-bg: #030864 !important;
 }
 
 .github-calendar-container rect.ContributionCalendar-day[data-level='0'],
