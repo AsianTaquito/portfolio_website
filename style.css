@@ -135,6 +135,7 @@ nav{
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -143,10 +144,32 @@ a{
     text-decoration-color:white;
 }
 
-a:hover{
-    color: #5eb2fb;
+.nav-links a{
+    position: relative;
+    display: inline-block;
     text-decoration: none;
-    text-decoration-color: rgb(181,181,181)
+}
+
+/* animated underline */
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 100%;
+    background: rgb(108,186,250);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 520ms cubic-bezier(.2,.8,.2,1);
+}
+
+.nav-links a:hover{
+    color: rgb(108,186,250);
+}
+
+.nav-links a:hover::after{
+    transform: scaleX(1);
 }
  
 .logo{
@@ -204,10 +227,15 @@ a:hover{
     text-decoration: none;
     transition: all 0.3 ease-in-out;
     margin: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .menu-links a:hover{
-    color: #5eb2fb;
+    color: rgb(108,186,250);
+    text-decoration-line: underline;
+    text-decoration-color: rgb(108,186,250);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 3px;
 }
 
 .menu-links li{
