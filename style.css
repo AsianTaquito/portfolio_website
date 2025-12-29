@@ -177,6 +177,11 @@ a{
     color: white;
 }
 
+/* Permanent Marker for desktop logo */
+#desktop-logo{
+    font-family: 'Permanent Marker', cursive;
+}
+
 .logo:hover{
     cursor: default;
 }
@@ -327,6 +332,7 @@ section{
 .title{
     font-size: 3rem;
     text-align: center;
+    font-family: 'Bungee Shade', cursive;
 }
 
 #socials{
