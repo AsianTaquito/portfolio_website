@@ -4,7 +4,7 @@
 }
 
 body{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', Times, serif;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -102,10 +102,6 @@ body::after {
     pointer-events: none;
 }
 
-html{
-    scroll-behavior: smooth !important;
-}
-
 h1{
     color:white;
 }
@@ -117,6 +113,18 @@ p{
 a,
 .btn{
     transition: all 300ms ease;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+}
+
+.about-text-p1{
+    position: relative;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
 }
 
 /*desktop nav*/
@@ -135,7 +143,7 @@ nav{
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Audiowide', sans-serif;
 }
 
 a{
@@ -195,6 +203,7 @@ a{
     position: relative;
     right: 45%;
     top: 0;
+    z-index: 1002;
 }
 
 .menu-icon{
@@ -204,6 +213,8 @@ a{
     height: 24px;
     width: 30px;
     cursor: pointer;
+    position: relative;
+    z-index: 1002;
 }
 
 .menu-icon span{
@@ -222,6 +233,24 @@ a{
     max-height: 0; 
     overflow: hidden; 
     transition: all 0.3 ease-in-out;
+    z-index: 1001;
+}
+
+.menu-links::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.menu-links.open::before {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .menu-links a{
@@ -232,7 +261,9 @@ a{
     text-decoration: none;
     transition: all 0.3 ease-in-out;
     margin: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Audiowide', sans-serif;
+    position: relative;
+    z-index: 1002;
 }
 
 .menu-links a:hover{
@@ -329,12 +360,6 @@ section{
     margin-bottom: 1rem;
 }
 
-.title{
-    font-size: 3rem;
-    text-align: center;
-    font-family: 'Bungee Shade', cursive;
-}
-
 #socials{
     display: flex;
     justify-content: center;
@@ -358,6 +383,7 @@ section{
 
 .btn {
     font-size: 16px;
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     position: relative;
     padding: 1em 2.5em;
@@ -491,6 +517,7 @@ button:hover::before {
     border-radius: 50%;
     background-color: rgb(20, 20, 20);
     border: none;
+    font-family: 'Permanent Marker', cursive;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -568,16 +595,6 @@ button:hover::before {
     min-height: 96vh;
 }
 
-.about-text{
-    text-align: center;
-    font-size: 1rem;
-    color: #b24dd9;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
 #about .about-container{
     gap: 2.25rem;
     margin-bottom: 2rem;
@@ -621,6 +638,7 @@ button:hover::before {
 }
 
 .detail-card{
+    font-family: 'Montserrat', sans-serif;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 1rem;
     border: 1px solid rgba(178, 77, 217, 0.2);
@@ -638,6 +656,7 @@ button:hover::before {
     padding: 0.75rem 1rem;
     background: rgba(0, 0, 0, 0.65);
     color: white;
+    font-family: 'Audiowide', sans-serif;
     font-size: 1rem;
     border-bottom: 1px solid rgba(178, 77, 217, 0.25);
     transform: translateZ(0);
@@ -654,6 +673,7 @@ button:hover::before {
 }
 
 .detail-card-text{
+    font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
     margin: 0;
@@ -745,6 +765,7 @@ button:hover::before {
 }
 
 .text-container p{
+    font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.85);
     font-size: 1.05rem;
     margin: 0;
@@ -766,6 +787,7 @@ button:hover::before {
 
 .github-calendar-title{
     color: white;
+    font-family: 'Audiowide', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     margin: 0 0 0.5rem 0;
@@ -838,14 +860,10 @@ button:hover::before {
     padding-bottom: 4rem;
 }
 
-.about-text-p1{
-    position: relative;
-    text-align: center;
-}
-
 .experience-sub-title{
+    font-family: 'Audiowide', sans-serif;
     color: white;
-    font-weight: 600; 
+    font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -1046,9 +1064,10 @@ article:hover{
     display: inline-block;
     background: linear-gradient(135deg, #e085f7 0%, #d373f3 100%);
     border: 2px transparent;
-    color: black;
+    color: white;
     padding: 12px 28px;
-    font-size: 12px;
+    font-family: 'Silkscreen', cursive;
+    font-size: 18px;
     font-weight: 900;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -1128,7 +1147,7 @@ article:hover{
             background: rgba(168, 85, 247, 0.2);
             transform: rotate(0deg) translateY(-12px) scale(1.05);
             border-color: #a855f7;
-            box-shadow: 0 20px 60px rgba(168, 85, 247, 0.5);
+            box-shadow: 0 12px 0 #0f172a;
         }
 
         .contact-card:hover::before {
@@ -1154,7 +1173,8 @@ article:hover{
 
         .card-title {
             color: #a855f7;
-            font-size: 12px;
+            font-family: 'Audiowide', sans-serif;
+            font-size: 16px;
             font-weight: 900;
             margin-bottom: 12px;
             text-transform: uppercase;
@@ -1170,6 +1190,7 @@ article:hover{
 
         .card-content {
             color: rgba(255, 255, 255, 0.95);
+            font-family: 'Montserrat', sans-serif;
             font-size: 18px;
             font-weight: 600;
             line-height: 1.5;
@@ -1206,6 +1227,7 @@ article:hover{
             background: rgba(255, 255, 255, 0.1);
             border: 3px solid liner-gradient(135deg, #e085f7 0%, #c969e8 25%, #b24dd9 50%, #8b27a6 75%, #740174 100%);
             color: black;
+            font-family: 'Permanent Marker', cursive;
             font-size: 18px;
             font-weight: 900;
             text-transform: uppercase;
@@ -1265,7 +1287,8 @@ article:hover{
 
         .social-label {
             color: #5eb2fb;
-            font-size: 14px;
+            font-family: 'Silkscreen', cursive;
+            font-size: 18px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
