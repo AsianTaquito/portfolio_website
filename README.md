@@ -27,7 +27,7 @@ Currently a **work in progress**, with ongoing improvements to layout, interacti
 
 ## Future Enhancements
 - Improved mobile responsiveness  
-- Dark mode toggle  
+- Light mode toggle  
 - Interactive animations and transitions  
 - Additional project showcases
 
@@ -36,7 +36,8 @@ Currently a **work in progress**, with ongoing improvements to layout, interacti
 ## Contact
 **Author:** Sebi Asiatico  
 **GitHub:** [AsianTaquito](https://github.com/AsianTaquito)  
-**LinkedIn:** (Add your LinkedIn URL here)
+**LinkedIn:** [Sebastian Asiatico](www.linkedin.com/in/asian-taquito99)
+
 
 ---
 
