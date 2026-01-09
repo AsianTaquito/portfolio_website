@@ -981,7 +981,75 @@ article:hover{
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 2rem 0;
 }
+
+.projects-container {
+    margin-top: 3rem;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.coming-soon-card {
+    width: 350px;
+    height: 150px;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+    border: 1px solid rgba(178, 77, 217, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.280);
+    transform: skewX(10deg);
+    transition: .4s;
+    overflow: hidden;
+    color: white;
+}
+
+.coming-soon-card:hover {
+    height: 350px;
+    transform: skew(0deg);
+}
+
+.card-content {
+    padding: 0.5rem 0.5rem 3.5rem 0.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 1rem);
+}
+
+.coming-soon-text {
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(218, 244, 237);
+    margin-bottom: 3rem;
+    text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+    margin-top: auto;
+    text-shadow: -5px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.coming-soon-card .btn {
+    padding: 1rem 2rem;
+    min-width: 250px;
+    margin-bottom: 2rem;
+}
+
 
 
 /*contact section*/
