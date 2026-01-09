@@ -948,7 +948,8 @@ article:hover{
 }
 
 .article-container article:hover{
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(75, 74, 74, 0.02);
+    backdrop-filter: blur(10px);
 }
 
 .article-container article::before{
@@ -1272,13 +1273,11 @@ article:hover{
         .card-content a {
             color: inherit;
             text-decoration: none;
-            border-bottom: 2px solid rgba(168, 85, 247, 0.5);
             transition: all 0.3s ease;
         }
 
         .contact-card:hover .card-content a {
             color: #a855f7;
-            border-bottom-color: #a855f7;
         }
 
         .cta-section {
