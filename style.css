@@ -581,17 +581,15 @@ button:hover::before {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     align-items: center;
     padding: 3rem 2rem;
     min-height: 96vh;
 }
 
-#about .about-container{
+.about-container{
     gap: 2.25rem;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin: 1rem 0 2rem;
     max-width: 1200px;
     width: 100%;
     align-items: center;
@@ -604,7 +602,7 @@ button:hover::before {
     width: 80%;
 }
 
-#about .about-details-container{
+.about-details-container{
     flex: 1;
     gap: 2rem;
 }
@@ -624,7 +622,6 @@ button:hover::before {
 .detail-container{
     flex: 1;
     position: relative;
-    perspective: 1000px;
     border-radius: 1rem;
     cursor: default;
     margin-bottom: 1rem;
@@ -737,8 +734,6 @@ button:hover::before {
 }
 
 .detail-icon{
-    height: 32px;
-    width: 32px;
     filter: brightness(0) invert(1);
     opacity: 0.9;
 }
@@ -769,12 +764,11 @@ button:hover::before {
     flex-direction: column;
     justify-content: center;
     background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(178, 77, 217, 0.15);
     border-radius: 1rem;
     padding: 1rem 1rem 0 1rem;
-    backdrop-filter: blur(10px);
-    width: 100%;
-    max-width: 1200px;
+    width: 80%;
     margin: auto;
 }
 
@@ -795,9 +789,6 @@ button:hover::before {
 
 .github-calendar-img{
     display: block;
-    width: 100%;
-    height: auto;
-    max-width: 860px;
 }
 
 /* Override Github calendar default CSS */
