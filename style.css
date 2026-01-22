@@ -836,12 +836,10 @@ button:hover::before {
 #experience{
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     align-items: center;
     min-height: 105vh;
     height: auto;
-    padding-bottom: 4rem;
 }
 
 .experience-sub-title{
@@ -860,13 +858,7 @@ button:hover::before {
     height: 100px;
 }
 
-.experience-detail-frontend{
-    flex: 1;
-    margin-top: 0;
-    max-height: fit-content;
-}
-
-.experience-detail-backend{
+.experience-detail-frontend, .experience-detail-backend{
     flex: 1;
     margin-top: 0;
     max-height: fit-content;
@@ -882,10 +874,8 @@ button:hover::before {
     display: flex; 
     position: relative;
     justify-content: space-evenly;
-    align-items: flex-start;
     margin-bottom: 0;
     gap: 2rem;
-    width: 100%;
 }
 
 
@@ -900,17 +890,13 @@ button:hover::before {
 article{
     margin: auto;
     padding: 1rem;
-    opacity: 0.93;
     border: 1.7px solid rgba(200, 137, 230, 0.637);
     vertical-align: middle;
-    text-align: center;
     border-radius: 1rem;
-    display: table;
     box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
     overflow: hidden;
     transition: all 0.4s ease 0s;
     align-content: center;
-    max-width: 50%;
 }
 
 article:hover{
@@ -937,16 +923,12 @@ article:hover{
 }
 
 .article-container article::before{
-    content: "";
     position: absolute;
     left: 2%;
     top: 2%;
-    width: 96%;
-    height: 96%;
     border-radius: 1rem;
     transition: 300ms ease;
     pointer-events: none;
-    z-index: 0;
 }
 
 .article-container article > svg.experience-icon{
