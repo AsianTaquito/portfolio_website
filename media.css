@@ -68,11 +68,21 @@
             /* Profile section */
             section {
                 padding: 2rem 1rem;
+                margin: 0 1.5rem;
+                height: auto;
+                min-height: auto;
+            }
+
+            #profile {
+                min-height: 100vh;
             }
 
             .profile_pic-container {
-                width: 100%;
-                max-width: 300px;
+                margin-left: 0;
+            }
+
+            .profile_pic-container {
+                display: none;
             }
 
             #profile {
@@ -107,7 +117,11 @@
             }
 
             .github-calendar-container{
-                width: 95%;
+                width: 100%;
+            }
+
+            .github-calendar-container .calendar{
+                overflow-x: auto;
             }
 
             /* Experience section */
@@ -137,6 +151,15 @@
                 padding: 1rem 0;
             }
 
+            .side-menu{
+                right: 0;
+            }
+
+            .menu-links{
+                right: 0;
+                left: auto;
+            }
+
             .nav-links {
                 font-size: 1.2rem;
                 gap: 1rem;
@@ -156,6 +179,9 @@
 
             .profile-text {
                 align-items: center;
+                margin: 0 auto;
+                text-align: center;
+                width: 100%;
             }
 
             .title {
