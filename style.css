@@ -359,6 +359,12 @@ a{
     z-index: 1002;
 }
 
+.menu-links .language-item{
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+}
+
 .menu-links a:hover{
     color: rgb(108,186,250);
     text-decoration-line: underline;
