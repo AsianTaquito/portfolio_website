@@ -151,6 +151,11 @@
                 padding: 1rem 0;
             }
 
+            section {
+                margin: 0;
+                width: 100%;
+            }
+
             .side-menu{
                 right: 0;
             }
@@ -170,6 +175,7 @@
                 flex-direction: column;
                 gap: 1rem;
                 align-items: center;
+                width: 100%;
             }
 
             .profile_pic-container {
@@ -245,6 +251,14 @@
 
         /* Mobile breakpoint - 300px */
         @media (max-width: 300px) {
+            section {
+                margin: 0;
+                width: 100%;
+            }
+
+            #profile {
+                width: 100%;
+            }
             .title {
                 font-size: 1.75rem;
             }
