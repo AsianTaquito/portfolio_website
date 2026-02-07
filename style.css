@@ -178,6 +178,58 @@ a{
 .nav-links a:hover::after{
     transform: scaleX(1);
 }
+
+.language-item{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.language-toggle{
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.language-dropdown{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    display: none;
+    z-index: 1003;
+}
+
+.language-item.open .language-dropdown{
+    display: block;
+}
+
+.language-select{
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.language-select option{
+    color: #000000;
+}
+
+.google-translate-hidden{
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
  
 .logo{
     font-size: 2rem;

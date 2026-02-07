@@ -4,6 +4,67 @@ function toggleMenu(){
     menu.classList.toggle("open");
     icon.classList.toggle("open");
 }
+//google translator
+function googleTranslateElementInit() {
+    if (typeof google === 'undefined' || !google.translate) return;
+    new google.translate.TranslateElement(
+        { pageLanguage: 'en', autoDisplay: false },
+        'google_translate_element'
+    );
+}
+
+function applyLanguage(code) {
+    const translateSelect = document.querySelector('.goog-te-combo');
+    if (!translateSelect) return;
+    translateSelect.value = code;
+    translateSelect.dispatchEvent(new Event('change'));
+}
+
+function closeLanguageMenus() {
+    const languageItems = document.querySelectorAll('.language-item');
+    const toggles = document.querySelectorAll('.language-toggle');
+    languageItems.forEach(item => item.classList.remove('open'));
+    toggles.forEach(toggle => toggle.setAttribute('aria-expanded', 'false'));
+}
+
+function bindLanguageSelectors() {
+    const desktopSelect = document.getElementById('language-select');
+    const sideSelect = document.getElementById('language-select-side');
+
+    const handleChange = (event) => {
+        const code = event.target.value;
+        if (desktopSelect && desktopSelect.value !== code) desktopSelect.value = code;
+        if (sideSelect && sideSelect.value !== code) sideSelect.value = code;
+        applyLanguage(code);
+        closeLanguageMenus();
+    };
+
+    if (desktopSelect) desktopSelect.addEventListener('change', handleChange);
+    if (sideSelect) sideSelect.addEventListener('change', handleChange);
+}
+
+function bindLanguageDropdowns() {
+    const languageItems = document.querySelectorAll('.language-item');
+    const toggles = document.querySelectorAll('.language-toggle');
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const parentItem = toggle.closest('.language-item');
+            const isOpen = parentItem.classList.contains('open');
+            closeLanguageMenus();
+            if (!isOpen) {
+                parentItem.classList.add('open');
+                toggle.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    bindLanguageSelectors();
+    bindLanguageDropdowns();
+});
 
 // Dynamic Section Loading
 let lastScrollY = window.pageYOffset;
