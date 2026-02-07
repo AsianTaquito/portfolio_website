@@ -118,6 +118,11 @@
 
             .github-calendar-container{
                 width: 100%;
+                max-width: 100%;
+                margin: 0 auto;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                box-sizing: border-box;
             }
 
             .github-calendar-container .calendar{
@@ -130,14 +135,18 @@
             }
 
             .article-container {
-                flex-direction: column;
+                padding: 0.5rem 0.5rem;
                 padding: 0.75rem 1.5rem;
                 gap: 0.75rem;
             }
 
             article {
-                margin: 0;
+                padding: 0.5rem 0.5rem;
                 padding: 0.75rem 1rem;
+
+            .experience-detail-container{
+                row-gap: 2rem;
+            }
             }
 
 
@@ -145,24 +154,19 @@
 
         /* Tablet breakpoint - 620px */
         @media (max-width: 620px) {
-            /* Navigation */
-            nav {
-                height: auto;
-                padding: 1rem 0;
+            body{
+                overflow-x: hidden;
             }
 
-            section {
+            section{
                 margin: 0;
                 width: 100%;
             }
 
-            .side-menu{
-                right: 0;
-            }
-
-            .menu-links{
-                right: 0;
-                left: auto;
+            /* Navigation */
+            nav {
+                height: auto;
+                padding: 1rem 0;
             }
 
             .nav-links {
@@ -175,7 +179,6 @@
                 flex-direction: column;
                 gap: 1rem;
                 align-items: center;
-                width: 100%;
             }
 
             .profile_pic-container {
@@ -209,6 +212,13 @@
                 width: 100%;
             }
 
+            .about-container,
+            .experience-detail-container,
+            .projects-container,
+            .contact-grid{
+                width: 100%;
+            }
+
             .detail-card-body {
                 padding: 1rem;
             }
@@ -217,7 +227,28 @@
                 max-width: 80px;
             }
 
+            /*Experience section */     
+            .experience-sub-title{
+                display: none;
+            }
 
+            .article-container{
+                padding: 0.5rem 0.25rem;
+                gap: 1rem;
+            }
+
+            article{
+                padding: 0.5rem 0.25rem;
+            }
+
+            .experience-icon{
+                width: 40px;
+                height: 40px;
+            }
+
+            .about-text-p1{
+                margin-top: 2rem;
+            }
 
             /* Contact section */            
             h1 {
@@ -226,37 +257,54 @@
             }
 
             .contact-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .label{
+                transform: none;
+                margin-top: 1.5rem;
+                margin-bottom: 1rem;
             }
 
             .contact-card {
-                padding: 20px 12px;
-                aspect-ratio: 1;
+                padding: 12px 10px;
+                aspect-ratio: auto;
+                transform: none;
+            }
+
+            .cta-section{
+                gap: 12px;
+            }
+
+            .contact-card::before{
+                opacity: 0;
             }
 
             .card-icon {
-                font-size: 32px;
-                margin-bottom: 12px;
+                font-size: 24px;
+                margin-bottom: 8px;
             }
 
             .card-title {
                 font-size: 10px;
+                letter-spacing: 1px;
             }
 
             .card-content {
-                font-size: 14px;
+                font-size: 12px;
+                word-break: break-word;
             }
         }
 
         /* Mobile breakpoint - 300px */
         @media (max-width: 300px) {
-            section {
-                margin: 0;
-                width: 100%;
+            body{
+                overflow-x: hidden;
             }
 
-            #profile {
+            section{
+                margin: 0;
                 width: 100%;
             }
             .title {
@@ -305,27 +353,28 @@
             }
 
             .contact-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 8px;
             }
 
             .contact-card {
-                padding: 16px 8px;
-                aspect-ratio: 1;
+                padding: 10px 8px;
+                aspect-ratio: auto;
             }
 
             .card-icon {
-                font-size: 28px;
-                margin-bottom: 8px;
+                font-size: 22px;
+                margin-bottom: 6px;
             }
 
             .card-title {
                 font-size: 8px;
-                margin-bottom: 6px;
+                margin-bottom: 4px;
             }
 
             .card-content {
-                font-size: 12px;
+                font-size: 11px;
+                word-break: break-word;
             }
 
             .social-link {
