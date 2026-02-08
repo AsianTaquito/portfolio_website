@@ -16,25 +16,24 @@ A personal portfolio website built with **HTML, CSS, and JavaScript** to showcas
 ## Tech Stack
 - **Frontend:** HTML, CSS, JavaScript  
 - **Design:** Custom styling with CSS (no frameworks used)  
-- **Deployment:** (Planned for future hosting on GitHub Pages or other platforms)
+- **Deployment:** Hosted on Github Pages 
 
 ---
 
 ## Project Status
-Currently a **work in progress**, with ongoing improvements to layout, interactivity, and responsiveness.
+Currently a **work in progress**
 
 ---
 
 ## Future Enhancements
 - Improved mobile responsiveness  
-- Light mode toggle  
-- Interactive animations and transitions  
+- Light mode toggle 
 - Additional project showcases
 
 ---
 
 ## Contact
-**Author:** Sebi Asiatico  
+**Author:** Sebastian Asiatico  
 **GitHub:** [AsianTaquito](https://github.com/AsianTaquito)  
 **LinkedIn:** [Sebastian Asiatico](www.linkedin.com/in/asian-taquito99)
 
